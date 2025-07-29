@@ -1,11 +1,18 @@
 import tkinter as tk
 import numpy as np
+import dask.dataframe as dd
 import myANFIS_V2 as anfis
 from sklearn.preprocessing import MinMaxScaler
 
 def run_test(filepath, epoch_n, mf, step_size, decrease_rate, increase_rate, log_widget):
+    # อ่านไฟล์ CSV ด้วย Dask (จะไม่โหลดข้อมูลทั้งหมดในหน่วยความจำในครั้งเดียว)
+    df = dd.read_csv(filepath)
 
-    data = np.genfromtxt(filepath, delimiter=',')
+    # คำนวณข้อมูลที่โหลดจาก Dask (compute จะทำให้ข้อมูลเป็น Pandas DataFrame)
+    data = df.compute().values
+    
+    #data = np.genfromtxt(filepath, delimiter=',')
+    
     # Divide data into input and output
     inputs = data[:, :-1]  # All columns except the last one are inputs
     output = data[:, -1:]  # The last column is the output
