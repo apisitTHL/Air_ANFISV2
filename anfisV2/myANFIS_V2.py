@@ -566,6 +566,7 @@ def plot_Nodes(mynet):
     plt.figure()
     plt.imshow(mynet['config'], aspect='auto', cmap='cool')
     plt.title('Node Connections')
+    plt.savefig('Plot_Node.png')
     plt.show()
 
 
@@ -592,6 +593,7 @@ def plot_mf(mynet, data):
         k = k + 1
         plt.tight_layout()
         plt.legend()
+    plt.savefig('Plot_MF.png')
     plt.show()
 
 
@@ -602,6 +604,7 @@ def plot_predictions(actual_output, anfis_predictions):
     plt.xlabel('Data Point')
     plt.ylabel('Output Value')
     plt.legend()
+    plt.savefig('Plot_Predict.png')
     plt.show()
 
 
@@ -632,6 +635,7 @@ def plot_r2(x, y):
     plt.legend(loc='upper left')
     plt.tight_layout()
     # Show the plot
+    plt.savefig('Plot_r2.png')
     plt.show
 
 
