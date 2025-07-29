@@ -4,6 +4,9 @@ pip install numpy matplotlib scikit-fuzzy
 pip install scipy
 pip install scikit-learn
 pip install networkx
+pip install dask
+pip install pandas
+pip install pyarrow
 
 in sql SELECT [DATE_TIME],[FLOW],[Pressure]
 
