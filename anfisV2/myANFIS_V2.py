@@ -2,6 +2,7 @@ import numpy as np
 import tkinter as tk
 import csv
 import matplotlib.pyplot as plt
+import threading
 import skfuzzy as fuzz
 from sklearn.metrics import mean_squared_error, r2_score
 
