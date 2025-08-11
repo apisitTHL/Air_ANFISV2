@@ -15,3 +15,8 @@ pesudo code about datetime = (hour*60 + minute)*0.000694774
 input1 = (hour*60 + minute)*0.000694774  # Example value
 input2 = flow  # Example value
 output = Pressure
+
+
+input time in PLC
+12:00 = 1200
+
